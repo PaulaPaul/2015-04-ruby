@@ -4,9 +4,8 @@ puts my_hash
 my_hash["martha@me.com"] = "martha"
 puts my_hash
 
-my_hash.delete("joe")
+my_hash.delete("joe@joeemail.com")
 puts my_hash
-
 
 json_hash = {key1: "value1", key2: "value2"}
 puts json_hash[:key1]
