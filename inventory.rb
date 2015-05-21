@@ -1,8 +1,10 @@
 # Inventory tracker
 
-# Inventory system should track the count of 4 items. The program should output the current items in a numbered list, 
-# and their current counts to the screen and then prompt the user to enter which item should be edited. 
-# After the user chooses the item to edit, 
+# Inventory system should track the count of 4 items.
+# The program should print the current items along with their current counts
+# in a numbered list, to the screen,
+# and then prompt the user to enter which inventory item they want to adjust.
+# After the user chooses the item they want to adjust, 
 # the users should be allowed to enter a new inventory count for the item.
 
 
@@ -50,11 +52,12 @@ puts " "
 
 quit = false
 while quit == false
-	puts "enter the number of the inventory item you want to adjust:" 
+	puts "enter the number of the inventory items you want to adjust:" 
 	inventory_array.each_with_index do |inv_item, index|
 		puts "     #{index + 1}: #{inv_item.name}"
 	end
 	puts "or enter 0 to exit"
+  
 	choice = gets.chomp.to_i - 1
 	if choice < 0
 		break

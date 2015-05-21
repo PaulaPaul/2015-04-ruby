@@ -1,5 +1,5 @@
 bottles = 99
-for n in 0..99
+for n in 0..99 
   puts "#{bottles} bottles of beer on the wall!"
   bottles = bottles - 1
 end

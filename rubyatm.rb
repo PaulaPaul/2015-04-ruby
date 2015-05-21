@@ -1,5 +1,4 @@
 def atm_action(balance, action)
-
   case action
     when '1'  # withdrawal
     	puts "please enter the amount you wish to withdraw:"
@@ -14,7 +13,8 @@ def atm_action(balance, action)
     	amount = gets.chomp.to_f
     	balance = balance + amount
     when '3'  # show me my balance
-    	puts "Your balance is:  $#{balance}"
+    	puts "Your balance is:  $   #{balance}" 
+      puts "Your balance is:  $   " + balance.to_s
     when 'exit'  # leave the ATM
     	puts "Thanks for banking with the Ruby ATM!"
     else
@@ -23,12 +23,13 @@ def atm_action(balance, action)
  
   return balance
 end
-
+# code starts executing here
 puts "Hello! What's your name?"
 name = gets.chomp
 
-puts "Welcome to the Ruby ATM.  Please enter your initial deposit:"
-balance = gets.chomp.to_f
+# puts "Welcome to the Ruby ATM.  Please enter your initial deposit:"
+# balance = gets.chomp.to_f
+balance = 100.25
 
 action = ""
 while action != 'exit'
