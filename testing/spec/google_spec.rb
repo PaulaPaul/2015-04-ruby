@@ -5,7 +5,7 @@ require 'capybara/poltergeist'
 require 'spec_helper.rb'
 
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, {debug: true})
+  Capybara::Poltergeist::Driver.new(app, {debug: false})
 end
 
 Capybara.default_driver = :poltergeist
