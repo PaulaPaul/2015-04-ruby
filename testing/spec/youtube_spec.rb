@@ -15,18 +15,15 @@ describe "Searching for a video about ENIAC" do
     fill_in('search_query', :with => "ENIAC programmers")
     click_button('search-btn')
     expect(page).to have_content("Jean Jennings Bartik")
-
-    visit ""
-    fill_in('search_query', :with => "ENIAC programmers")
-    click_button('search-btn')
     expect(page).to have_content("Kathleen McNulty")
   end
 end
 
 describe "Searching for a video about people who created the compiler" do
   it "allows searches for pioneers of compiler technology" do
-    visit_youtube
-    search_for_term("compiler pioneer")
-    verify_I_see("Grace Hopper")
+    visit ""
+    fill_in('search_query', :with => "compiler pioneer")
+    click_button('search-btn')
+    expect(page).to have_content("Grace Hopper")
   end
 end
