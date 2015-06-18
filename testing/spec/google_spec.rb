@@ -7,7 +7,7 @@ require 'spec_helper.rb'
 Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(app, {debug: false})
 end
-
+  
 Capybara.default_driver = :poltergeist
 Capybara.app_host = 'http://www.google.com'
 
